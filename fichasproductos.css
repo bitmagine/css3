@@ -1,0 +1,85 @@
+body {margin:0; padding:0; font-weight:bold; font-family:Exo; font-size:42px; color:00ff00;}
+
+html::-webkit-scrollbar {display: none;}
+*:focus {outline: none;}
+
+.material-icons {
+  font-family: 'Material Icons';
+  font-weight: normal;
+  font-style: normal;
+  display: inline-block;
+  line-height: 1;
+  text-transform: none;
+  letter-spacing: normal;
+  word-wrap: normal;
+  white-space: nowrap;
+  direction: ltr;
+}
+
+@keyframes vibrar {
+  from,
+  to {transform: translate3d(0, 0, 0)}
+  10%, 30%, 50%, 70%, 90% {transform: translate3d(-10px, 0, 0);}
+  20%, 40%, 60%, 80% {transform: translate3d(10px, 0, 0);}
+}
+
+@keyframes ampliar {
+  from {transform: scale3d(1, 1, 1);}
+  50% {transform: scale3d(1.8, 1.8, 1)}
+  to {transform: scale3d(1, 1, 1);}
+}
+
+@keyframes rotar {
+  from {transform: rotate(0); box-shadow: none;}
+  50% {transform: rotate(180deg); box-shadow: none;}
+  to {transform: rotate(360deg); box-shadow: 0 0 2px 1px rgba(102,166,165,.3), 0 0 1px 17px rgba(255,255,255,1), 3px 30px 8px 0 rgba(0,30,25,.5), 0 0 3px 16px rgba(32,96,95,.9);}
+}
+
+.volver {
+display: inline-block; position: fixed; bottom: 40px; right: 30px; margin: 0; padding: 20px; font-size: 120px;
+text-shadow: 0px 0px 1px #000000, 0px 0px 2px #ffffff, 0px 0px 3px #ffffff, 0px 0px 5px #ffffff, 0px 0px 7px #ffffff, 0px 0px 9px #ffffff, 0px 0px 12px #000000;
+}
+
+.casa {z-index:100; display: inline-block; position: fixed; top: 10px; right: 10px; margin: 0; padding: 0;}
+
+.contenedor {position: relative; display: inline-block; text-align: center;}
+
+.kabezza {
+border: 0px solid blue; overflow: hidden;
+position: sticky; position: -webkit-sticky; top:0; background-color: #ffffff;
+z-index: 99; backface-visibility: hidden; width: 100%; padding: 0; margin:0;
+box-shadow: 0 50px 20px 14px rgba(255,255,255,.6);
+}
+
+.titulo{
+border: 0px solid red;  display: block; padding:0; margin:0; text-transform: uppercase; text-shadow: 0 0 7px #044740, 0 0 5px #044740, 0 0 3px #044740, 0 0 1px #000000, 0 7px 3px rgba(20,87,80,.4);
+font-family:'Dosis'; text-align:right; align: right; font-weight:700; font-size: 40px; color: #ffffff;
+position: relative; bottom: 180px; right: 40px; z-index: 1000; height:0;
+}
+
+.ikonoSeccion {
+border: 0px solid red; display: inline-block; position: relative; padding:0; margin: 80px 0 0 0; align:center; text-align:center;
+}
+
+.ikonoFoto {
+border-radius: 50%; box-shadow: 0 0 2px 1px rgba(102,166,165,.3), 0 0 1px 17px rgba(255,255,255,1), 3px 30px 8px 0 rgba(0,30,25,.5), 0 0 3px 16px rgba(32,96,95,.9);
+width: 360px; height: 360px; border:0; padding:0; margin:0; 
+position: relative; background-color: #ffffff; background: linear-gradient(0deg, rgba(255,255,255,1) 0%, rgba(0,0,0,.01) 100%);
+}
+
+.referencia {display: block; color: #5080ff; font-size: 32px; margin: 30px 0 100px 0; padding: 0; text-align:center; vertical-align: top; font-weight: bold;}
+
+.txt0 {hyphens: auto; font-family:Exo; margin: 0 0 12px 0; padding:0; color:#404040; font-size:42px; text-align:justify; font-weight: 700;}
+
+.txt1 {hyphens: auto; font-family:Exo; margin: 0 0 12px 0; padding:0; color:#606060; font-size:36px; text-align:justify; font-weight: 400;}
+
+.xepar1 {height: 60px;}
+.xepar2 {height: 54px;}
+
+ul, li {margin:0; padding:0;}
+
+li {padding-bottom:6px;}
+
+.vibracion:hover {animation: vibrar 1s ease 0s normal;}
+.ikonoFoto:hover {animation: rotar 0.2s linear 0s normal;}
+.zooom:hover {animation: ampliar 0.3s linear 0s normal;}
